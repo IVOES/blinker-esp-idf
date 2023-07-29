@@ -1,0 +1,1067 @@
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1880:9: style: Condition '!url' is always true [knownConditionTrueFalse]
+    if (!url) {
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1852:17: note: Assignment 'url=NULL', assigned value is 0
+    char *url = NULL;
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1854:9: note: Assuming condition is false
+    if (!payload) {
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1880:9: note: Condition '!url' is always true
+    if (!url) {
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:772:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_get(client);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:771:17: note: err is assigned
+            err = blinker_http_set_url(client, url);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:772:17: note: err is overwritten
+            err = blinker_http_get(client);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:773:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:772:17: note: err is assigned
+            err = blinker_http_get(client);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:773:17: note: err is overwritten
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:774:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:773:17: note: err is assigned
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:774:17: note: err is overwritten
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:779:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:778:17: note: err is assigned
+            err = blinker_http_set_url(client, url);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:779:17: note: err is overwritten
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:780:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_post(client, msg);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:779:17: note: err is assigned
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:780:17: note: err is overwritten
+            err = blinker_http_post(client, msg);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:781:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:780:17: note: err is assigned
+            err = blinker_http_post(client, msg);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:781:17: note: err is overwritten
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:782:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:781:17: note: err is assigned
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:782:17: note: err is overwritten
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2417:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2416:9: note: err is assigned
+    err = blinker_wifi_init();
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2417:9: note: err is overwritten
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2418:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_wifi_start(&wifi_cfg);
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2417:9: note: err is assigned
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2418:9: note: err is overwritten
+    err = blinker_wifi_start(&wifi_cfg);
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2449:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_device_mqtt_init();
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2435:9: note: err is assigned
+    err = blinker_device_wifi_init();
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2449:9: note: err is overwritten
+    err = blinker_device_mqtt_init();
+        ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:140:17: style: The scope of the variable 'one_loop' can be reduced. [variableScope]
+    static bool one_loop = false;
+                ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2238:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+        err = blinker_mqtt_init(&mqtt_config);
+            ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2237:13: note: err is assigned
+        err = blinker_mdns_init(mqtt_config.devicename);
+            ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2238:13: note: err is overwritten
+        err = blinker_mqtt_init(&mqtt_config);
+            ^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:2226:19: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    esp_err_t err = ESP_FAIL;
+                  ^
+ESP32/v4.3/components/Blinker/src/provisioning/blinker_prov_smartconfig.c:64:17: style: The scope of the variable 'rvd_data' can be reduced. [variableScope]
+        uint8_t rvd_data[33] = { 0 };
+                ^
+ESP32/v4.3/components/Blinker/src/provisioning/blinker_wifi.c:66:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_storage_erase(BLINKER_CMD_WIFI_CONFIG);
+        ^
+ESP32/v4.3/components/Blinker/src/provisioning/blinker_wifi.c:64:9: note: err is assigned
+    err = esp_wifi_restore();
+        ^
+ESP32/v4.3/components/Blinker/src/provisioning/blinker_wifi.c:66:9: note: err is overwritten
+    err = blinker_storage_erase(BLINKER_CMD_WIFI_CONFIG);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:160:66: style: Condition 'btn->press_serial_cb.tmr!=NULL' is always true [knownConditionTrueFalse]
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                                                 ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:160:33: note: Assuming that condition 'btn->press_serial_cb.tmr' is not redundant
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:160:66: note: Condition 'btn->press_serial_cb.tmr!=NULL' is always true
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                                                 ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_reboot.c:98:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_reboot.c:89:9: note: err is assigned
+    err = blinker_storage_set(REBOOT_RECORD_KEY, &g_reboot_record, sizeof(blinker_reboot_record_t));
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_reboot.c:98:9: note: err is overwritten
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_reboot.c:99:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = esp_timer_start_once(time_handle, CONFIG_BLINKER_REBOOT_UNBROKEN_INTERVAL_TIMEOUT * 1000UL);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_reboot.c:98:9: note: err is assigned
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_reboot.c:99:9: note: err is overwritten
+    err = esp_timer_start_once(time_handle, CONFIG_BLINKER_REBOOT_UNBROKEN_INTERVAL_TIMEOUT * 1000UL);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:50:13: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+        ret = nvs_erase_all(handle);
+            ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:44:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:50:13: note: ret is overwritten
+        ret = nvs_erase_all(handle);
+            ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:73:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = nvs_set_blob(handle, key, value, length);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:70:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:73:9: note: ret is overwritten
+    ret = nvs_set_blob(handle, key, value, length);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:93:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = nvs_get_blob(handle, key, value, &length);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:90:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP32/v4.3/components/Blinker/src/utils/blinker_storage.c:93:9: note: ret is overwritten
+    ret = nvs_get_blob(handle, key, value, &length);
+        ^
+ESP32/v4.3/components/esp_http_server/src/httpd_main.c:241:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+ESP32/v4.3/components/esp_http_server/src/httpd_parse.c:1004:35: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '\0'' is always true. [redundantCondition]
+        while ((*val_ptr != '\0') && (*val_ptr == ' ')) {
+                                  ^
+ESP32/v4.3/components/esp_http_server/src/httpd_parse.c:1060:35: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '\0'' is always true. [redundantCondition]
+        while ((*val_ptr != '\0') && (*val_ptr == ' ')) {
+                                  ^
+ESP32/v4.3/components/esp_http_server/src/httpd_parse.c:628:9: style: The scope of the variable 'blk_len' can be reduced. [variableScope]
+    int blk_len,  offset;
+        ^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:218:50: style:inconclusive: Function 'httpd_sess_delete' argument 2 names different: declaration 'clifd' definition 'fd'. [funcArgNamesDifferent]
+int httpd_sess_delete(struct httpd_data *hd, int fd)
+                                                 ^
+ESP32/v4.3/components/esp_http_server/src/esp_httpd_priv.h:199:50: note: Function 'httpd_sess_delete' argument 2 names different: declaration 'clifd' definition 'fd'.
+int httpd_sess_delete(struct httpd_data *hd, int clifd);
+                                                 ^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:218:50: note: Function 'httpd_sess_delete' argument 2 names different: declaration 'clifd' definition 'fd'.
+int httpd_sess_delete(struct httpd_data *hd, int fd)
+                                                 ^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:296:57: style:inconclusive: Function 'httpd_sess_process' argument 2 names different: declaration 'clifd' definition 'newfd'. [funcArgNamesDifferent]
+esp_err_t httpd_sess_process(struct httpd_data *hd, int newfd)
+                                                        ^
+ESP32/v4.3/components/esp_http_server/src/esp_httpd_priv.h:180:57: note: Function 'httpd_sess_process' argument 2 names different: declaration 'clifd' definition 'newfd'.
+esp_err_t httpd_sess_process(struct httpd_data *hd, int clifd);
+                                                        ^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:296:57: note: Function 'httpd_sess_process' argument 2 names different: declaration 'clifd' definition 'newfd'.
+esp_err_t httpd_sess_process(struct httpd_data *hd, int newfd)
+                                                        ^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:358:51: style:inconclusive: Function 'httpd_sess_iterate' argument 2 names different: declaration 'fd' definition 'start_fd'. [funcArgNamesDifferent]
+int httpd_sess_iterate(struct httpd_data *hd, int start_fd)
+                                                  ^
+ESP32/v4.3/components/esp_http_server/src/esp_httpd_priv.h:233:51: note: Function 'httpd_sess_iterate' argument 2 names different: declaration 'fd' definition 'start_fd'.
+int httpd_sess_iterate(struct httpd_data *hd, int fd);
+                                                  ^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:358:51: note: Function 'httpd_sess_iterate' argument 2 names different: declaration 'fd' definition 'start_fd'.
+int httpd_sess_iterate(struct httpd_data *hd, int start_fd)
+                                                  ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:258:9: portability: %d in format string (no. 3) requires 'int' but the argument type is 'ssize_t {aka signed long}'. [invalidPrintfArgType_sint]
+    if (snprintf(ra->scratch, sizeof(ra->scratch), httpd_hdr_str,
+        ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:365:5: portability: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'ssize_t {aka signed long}'. [invalidPrintfArgType_uint]
+    snprintf(len_str, sizeof(len_str), "%x\r\n", buf_len);
+    ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:77:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:317:17: style: The scope of the variable 'httpd_chunked_hdr_str' can be reduced. [variableScope]
+    const char *httpd_chunked_hdr_str = "HTTP/1.1 %s\r\nContent-Type: %s\r\nTransfer-Encoding: chunked\r\n";
+                ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:318:17: style: The scope of the variable 'colon_separator' can be reduced. [variableScope]
+    const char *colon_separator = ": ";
+                ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:319:17: style: The scope of the variable 'cr_lf_seperator' can be reduced. [variableScope]
+    const char *cr_lf_seperator = "\r\n";
+                ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:55:29: style:inconclusive: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'. [funcArgNamesDifferent]
+int httpd_send(httpd_req_t *r, const char *buf, size_t buf_len)
+                            ^
+ESP32/v4.3/components/esp_http_server/src/esp_httpd_priv.h:404:29: note: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'.
+int httpd_send(httpd_req_t *req, const char *buf, size_t buf_len);
+                            ^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:55:29: note: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'.
+int httpd_send(httpd_req_t *r, const char *buf, size_t buf_len)
+                            ^
+ESP32/v4.3/components/esp_http_server/test/test_http_server.c:125:5: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    printf("Initial task count: %d\n", task_count);
+    ^
+ESP32/v4.3/components/esp_http_server/test/test_http_server.c:135:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (starting): %d expected %d\n",
+            ^
+ESP32/v4.3/components/esp_http_server/test/test_http_server.c:135:13: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (starting): %d expected %d\n",
+            ^
+ESP32/v4.3/components/esp_http_server/test/test_http_server.c:150:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (stopping): %d expected %d\n",
+            ^
+ESP32/v4.3/components/esp_http_server/test/test_http_server.c:150:13: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (stopping): %d expected %d\n",
+            ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:1880:9: style: Condition '!url' is always true [knownConditionTrueFalse]
+    if (!url) {
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:1852:17: note: Assignment 'url=NULL', assigned value is 0
+    char *url = NULL;
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:1854:9: note: Assuming condition is false
+    if (!payload) {
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:1880:9: note: Condition '!url' is always true
+    if (!url) {
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:772:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_get(client);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:771:17: note: err is assigned
+            err = blinker_http_set_url(client, url);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:772:17: note: err is overwritten
+            err = blinker_http_get(client);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:773:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:772:17: note: err is assigned
+            err = blinker_http_get(client);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:773:17: note: err is overwritten
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:774:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:773:17: note: err is assigned
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:774:17: note: err is overwritten
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:779:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:778:17: note: err is assigned
+            err = blinker_http_set_url(client, url);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:779:17: note: err is overwritten
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:780:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_post(client, msg);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:779:17: note: err is assigned
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:780:17: note: err is overwritten
+            err = blinker_http_post(client, msg);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:781:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:780:17: note: err is assigned
+            err = blinker_http_post(client, msg);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:781:17: note: err is overwritten
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:782:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:781:17: note: err is assigned
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:782:17: note: err is overwritten
+            err = blinker_http_close(client);
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2417:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2416:9: note: err is assigned
+    err = blinker_wifi_init();
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2417:9: note: err is overwritten
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2418:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_wifi_start(&wifi_cfg);
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2417:9: note: err is assigned
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2418:9: note: err is overwritten
+    err = blinker_wifi_start(&wifi_cfg);
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2449:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_device_mqtt_init();
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2435:9: note: err is assigned
+    err = blinker_device_wifi_init();
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2449:9: note: err is overwritten
+    err = blinker_device_mqtt_init();
+        ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:140:17: style: The scope of the variable 'one_loop' can be reduced. [variableScope]
+    static bool one_loop = false;
+                ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2238:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+        err = blinker_mqtt_init(&mqtt_config);
+            ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2237:13: note: err is assigned
+        err = blinker_mdns_init(mqtt_config.devicename);
+            ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2238:13: note: err is overwritten
+        err = blinker_mqtt_init(&mqtt_config);
+            ^
+ESP32/v4.4/components/Blinker/src/api/blinker_api.c:2226:19: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    esp_err_t err = ESP_FAIL;
+                  ^
+ESP32/v4.4/components/Blinker/src/provisioning/blinker_prov_smartconfig.c:64:17: style: The scope of the variable 'rvd_data' can be reduced. [variableScope]
+        uint8_t rvd_data[33] = { 0 };
+                ^
+ESP32/v4.4/components/Blinker/src/provisioning/blinker_wifi.c:66:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_storage_erase(BLINKER_CMD_WIFI_CONFIG);
+        ^
+ESP32/v4.4/components/Blinker/src/provisioning/blinker_wifi.c:64:9: note: err is assigned
+    err = esp_wifi_restore();
+        ^
+ESP32/v4.4/components/Blinker/src/provisioning/blinker_wifi.c:66:9: note: err is overwritten
+    err = blinker_storage_erase(BLINKER_CMD_WIFI_CONFIG);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_button.c:160:66: style: Condition 'btn->press_serial_cb.tmr!=NULL' is always true [knownConditionTrueFalse]
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                                                 ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_button.c:160:33: note: Assuming that condition 'btn->press_serial_cb.tmr' is not redundant
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_button.c:160:66: note: Condition 'btn->press_serial_cb.tmr!=NULL' is always true
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                                                 ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_reboot.c:98:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_reboot.c:89:9: note: err is assigned
+    err = blinker_storage_set(REBOOT_RECORD_KEY, &g_reboot_record, sizeof(blinker_reboot_record_t));
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_reboot.c:98:9: note: err is overwritten
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_reboot.c:99:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = esp_timer_start_once(time_handle, CONFIG_BLINKER_REBOOT_UNBROKEN_INTERVAL_TIMEOUT * 1000UL);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_reboot.c:98:9: note: err is assigned
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_reboot.c:99:9: note: err is overwritten
+    err = esp_timer_start_once(time_handle, CONFIG_BLINKER_REBOOT_UNBROKEN_INTERVAL_TIMEOUT * 1000UL);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:50:13: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+        ret = nvs_erase_all(handle);
+            ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:44:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:50:13: note: ret is overwritten
+        ret = nvs_erase_all(handle);
+            ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:73:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = nvs_set_blob(handle, key, value, length);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:70:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:73:9: note: ret is overwritten
+    ret = nvs_set_blob(handle, key, value, length);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:93:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = nvs_get_blob(handle, key, value, &length);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:90:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP32/v4.4/components/Blinker/src/utils/blinker_storage.c:93:9: note: ret is overwritten
+    ret = nvs_get_blob(handle, key, value, &length);
+        ^
+ESP32/v4.4/components/esp_http_server/src/httpd_main.c:244:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+ESP32/v4.4/components/esp_http_server/src/httpd_parse.c:1002:35: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '\0'' is always true. [redundantCondition]
+        while ((*val_ptr != '\0') && (*val_ptr == ' ')) {
+                                  ^
+ESP32/v4.4/components/esp_http_server/src/httpd_parse.c:1058:35: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '\0'' is always true. [redundantCondition]
+        while ((*val_ptr != '\0') && (*val_ptr == ' ')) {
+                                  ^
+ESP32/v4.4/components/esp_http_server/src/httpd_parse.c:620:9: style: The scope of the variable 'blk_len' can be reduced. [variableScope]
+    int blk_len,  offset;
+        ^
+ESP32/v4.4/components/esp_http_server/src/httpd_parse.c:1145:24: style: Checking if unsigned expression 'hdr_len_cookie' is less than zero. [unsignedLessThanZero]
+    if (hdr_len_cookie <= 0) {
+                       ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:250:9: portability: %d in format string (no. 3) requires 'int' but the argument type is 'ssize_t {aka signed long}'. [invalidPrintfArgType_sint]
+    if (snprintf(ra->scratch, sizeof(ra->scratch), httpd_hdr_str,
+        ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:357:5: portability: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'ssize_t {aka signed long}'. [invalidPrintfArgType_uint]
+    snprintf(len_str, sizeof(len_str), "%x\r\n", buf_len);
+    ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:69:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:309:17: style: The scope of the variable 'httpd_chunked_hdr_str' can be reduced. [variableScope]
+    const char *httpd_chunked_hdr_str = "HTTP/1.1 %s\r\nContent-Type: %s\r\nTransfer-Encoding: chunked\r\n";
+                ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:310:17: style: The scope of the variable 'colon_separator' can be reduced. [variableScope]
+    const char *colon_separator = ": ";
+                ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:311:17: style: The scope of the variable 'cr_lf_seperator' can be reduced. [variableScope]
+    const char *cr_lf_seperator = "\r\n";
+                ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:47:29: style:inconclusive: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'. [funcArgNamesDifferent]
+int httpd_send(httpd_req_t *r, const char *buf, size_t buf_len)
+                            ^
+ESP32/v4.4/components/esp_http_server/src/esp_httpd_priv.h:406:29: note: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'.
+int httpd_send(httpd_req_t *req, const char *buf, size_t buf_len);
+                            ^
+ESP32/v4.4/components/esp_http_server/src/httpd_txrx.c:47:29: note: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'.
+int httpd_send(httpd_req_t *r, const char *buf, size_t buf_len)
+                            ^
+ESP32/v4.4/components/esp_http_server/test/test_http_server.c:117:5: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    printf("Initial task count: %d\n", task_count);
+    ^
+ESP32/v4.4/components/esp_http_server/test/test_http_server.c:127:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (starting): %d expected %d\n",
+            ^
+ESP32/v4.4/components/esp_http_server/test/test_http_server.c:127:13: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (starting): %d expected %d\n",
+            ^
+ESP32/v4.4/components/esp_http_server/test/test_http_server.c:142:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (stopping): %d expected %d\n",
+            ^
+ESP32/v4.4/components/esp_http_server/test/test_http_server.c:142:13: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("Incorrect task count (stopping): %d expected %d\n",
+            ^
+ESP8266/components/blinker/src/api/blinker_api.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 18 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+ESP8266/components/blinker/src/api/blinker_api.c:1880:9: style: Condition '!url' is always true [knownConditionTrueFalse]
+    if (!url) {
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:1852:17: note: Assignment 'url=NULL', assigned value is 0
+    char *url = NULL;
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:1854:9: note: Assuming condition is false
+    if (!payload) {
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:1880:9: note: Condition '!url' is always true
+    if (!url) {
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:772:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_get(client);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:771:17: note: err is assigned
+            err = blinker_http_set_url(client, url);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:772:17: note: err is overwritten
+            err = blinker_http_get(client);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:773:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:772:17: note: err is assigned
+            err = blinker_http_get(client);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:773:17: note: err is overwritten
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:774:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_close(client);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:773:17: note: err is assigned
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:774:17: note: err is overwritten
+            err = blinker_http_close(client);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:779:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:778:17: note: err is assigned
+            err = blinker_http_set_url(client, url);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:779:17: note: err is overwritten
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:780:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_post(client, msg);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:779:17: note: err is assigned
+            err = blinker_http_set_header(client, "Content-Type", "application/json");
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:780:17: note: err is overwritten
+            err = blinker_http_post(client, msg);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:781:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:780:17: note: err is assigned
+            err = blinker_http_post(client, msg);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:781:17: note: err is overwritten
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:782:17: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+            err = blinker_http_close(client);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:781:17: note: err is assigned
+            err = blinker_http_read_response(client, payload, payload_len);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:782:17: note: err is overwritten
+            err = blinker_http_close(client);
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:2419:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2418:9: note: err is assigned
+    err = blinker_wifi_init();
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2419:9: note: err is overwritten
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2420:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_wifi_start(&wifi_cfg);
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2419:9: note: err is assigned
+    err = blinker_wifi_get_config(&wifi_cfg);
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2420:9: note: err is overwritten
+    err = blinker_wifi_start(&wifi_cfg);
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2451:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_device_mqtt_init();
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2437:9: note: err is assigned
+    err = blinker_device_wifi_init();
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:2451:9: note: err is overwritten
+    err = blinker_device_mqtt_init();
+        ^
+ESP8266/components/blinker/src/api/blinker_api.c:140:17: style: The scope of the variable 'one_loop' can be reduced. [variableScope]
+    static bool one_loop = false;
+                ^
+ESP8266/components/blinker/src/api/blinker_api.c:2238:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+        err = blinker_mqtt_init(&mqtt_config);
+            ^
+ESP8266/components/blinker/src/api/blinker_api.c:2237:13: note: err is assigned
+        err = blinker_mdns_init(mqtt_config.devicename);
+            ^
+ESP8266/components/blinker/src/api/blinker_api.c:2238:13: note: err is overwritten
+        err = blinker_mqtt_init(&mqtt_config);
+            ^
+ESP8266/components/blinker/src/api/blinker_api.c:2226:19: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    esp_err_t err = ESP_FAIL;
+                  ^
+ESP8266/components/blinker/src/provisioning/blinker_prov_smartconfig.c:64:17: style: The scope of the variable 'rvd_data' can be reduced. [variableScope]
+        uint8_t rvd_data[33] = { 0 };
+                ^
+ESP8266/components/blinker/src/provisioning/blinker_wifi.c:66:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = blinker_storage_erase(BLINKER_CMD_WIFI_CONFIG);
+        ^
+ESP8266/components/blinker/src/provisioning/blinker_wifi.c:64:9: note: err is assigned
+    err = esp_wifi_restore();
+        ^
+ESP8266/components/blinker/src/provisioning/blinker_wifi.c:66:9: note: err is overwritten
+    err = blinker_storage_erase(BLINKER_CMD_WIFI_CONFIG);
+        ^
+ESP8266/components/blinker/src/utils/blinker_button.c:160:66: style: Condition 'btn->press_serial_cb.tmr!=NULL' is always true [knownConditionTrueFalse]
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                                                 ^
+ESP8266/components/blinker/src/utils/blinker_button.c:160:33: note: Assuming that condition 'btn->press_serial_cb.tmr' is not redundant
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                ^
+ESP8266/components/blinker/src/utils/blinker_button.c:160:66: note: Condition 'btn->press_serial_cb.tmr!=NULL' is always true
+        if (btn->press_serial_cb.tmr && btn->press_serial_cb.tmr != NULL) {
+                                                                 ^
+ESP8266/components/blinker/src/utils/blinker_reboot.c:98:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP8266/components/blinker/src/utils/blinker_reboot.c:89:9: note: err is assigned
+    err = blinker_storage_set(REBOOT_RECORD_KEY, &g_reboot_record, sizeof(blinker_reboot_record_t));
+        ^
+ESP8266/components/blinker/src/utils/blinker_reboot.c:98:9: note: err is overwritten
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP8266/components/blinker/src/utils/blinker_reboot.c:99:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = esp_timer_start_once(time_handle, CONFIG_BLINKER_REBOOT_UNBROKEN_INTERVAL_TIMEOUT * 1000UL);
+        ^
+ESP8266/components/blinker/src/utils/blinker_reboot.c:98:9: note: err is assigned
+    err = esp_timer_create(&timer_cfg, &time_handle);
+        ^
+ESP8266/components/blinker/src/utils/blinker_reboot.c:99:9: note: err is overwritten
+    err = esp_timer_start_once(time_handle, CONFIG_BLINKER_REBOOT_UNBROKEN_INTERVAL_TIMEOUT * 1000UL);
+        ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:50:13: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+        ret = nvs_erase_all(handle);
+            ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:44:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:50:13: note: ret is overwritten
+        ret = nvs_erase_all(handle);
+            ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:73:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = nvs_set_blob(handle, key, value, length);
+        ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:70:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:73:9: note: ret is overwritten
+    ret = nvs_set_blob(handle, key, value, length);
+        ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:93:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = nvs_get_blob(handle, key, value, &length);
+        ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:90:9: note: ret is assigned
+    ret = nvs_open(CONFIG_BLINKER_NVS_NAMESPACE, NVS_READWRITE, &handle);
+        ^
+ESP8266/components/blinker/src/utils/blinker_storage.c:93:9: note: ret is overwritten
+    ret = nvs_get_blob(handle, key, value, &length);
+        ^
+ESP8266/components/esp_http_server/src/httpd_main.c:216:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+ESP8266/components/esp_http_server/src/httpd_parse.c:864:35: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '\0'' is always true. [redundantCondition]
+        while ((*val_ptr != '\0') && (*val_ptr == ' ')) {
+                                  ^
+ESP8266/components/esp_http_server/src/httpd_parse.c:911:35: style: Redundant condition: If 'EXPR == ' '', the comparison 'EXPR != '\0'' is always true. [redundantCondition]
+        while ((*val_ptr != '\0') && (*val_ptr == ' ')) {
+                                  ^
+ESP8266/components/esp_http_server/src/httpd_parse.c:523:9: style: The scope of the variable 'blk_len' can be reduced. [variableScope]
+    int blk_len,  offset;
+        ^
+ESP8266/components/esp_http_server/src/httpd_sess.c:215:50: style:inconclusive: Function 'httpd_sess_delete' argument 2 names different: declaration 'clifd' definition 'fd'. [funcArgNamesDifferent]
+int httpd_sess_delete(struct httpd_data *hd, int fd)
+                                                 ^
+ESP8266/components/esp_http_server/src/esp_httpd_priv.h:252:50: note: Function 'httpd_sess_delete' argument 2 names different: declaration 'clifd' definition 'fd'.
+int httpd_sess_delete(struct httpd_data *hd, int clifd);
+                                                 ^
+ESP8266/components/esp_http_server/src/httpd_sess.c:215:50: note: Function 'httpd_sess_delete' argument 2 names different: declaration 'clifd' definition 'fd'.
+int httpd_sess_delete(struct httpd_data *hd, int fd)
+                                                 ^
+ESP8266/components/esp_http_server/src/httpd_sess.c:291:57: style:inconclusive: Function 'httpd_sess_process' argument 2 names different: declaration 'clifd' definition 'newfd'. [funcArgNamesDifferent]
+esp_err_t httpd_sess_process(struct httpd_data *hd, int newfd)
+                                                        ^
+ESP8266/components/esp_http_server/src/esp_httpd_priv.h:233:57: note: Function 'httpd_sess_process' argument 2 names different: declaration 'clifd' definition 'newfd'.
+esp_err_t httpd_sess_process(struct httpd_data *hd, int clifd);
+                                                        ^
+ESP8266/components/esp_http_server/src/httpd_sess.c:291:57: note: Function 'httpd_sess_process' argument 2 names different: declaration 'clifd' definition 'newfd'.
+esp_err_t httpd_sess_process(struct httpd_data *hd, int newfd)
+                                                        ^
+ESP8266/components/esp_http_server/src/httpd_sess.c:351:51: style:inconclusive: Function 'httpd_sess_iterate' argument 2 names different: declaration 'fd' definition 'start_fd'. [funcArgNamesDifferent]
+int httpd_sess_iterate(struct httpd_data *hd, int start_fd)
+                                                  ^
+ESP8266/components/esp_http_server/src/esp_httpd_priv.h:286:51: note: Function 'httpd_sess_iterate' argument 2 names different: declaration 'fd' definition 'start_fd'.
+int httpd_sess_iterate(struct httpd_data *hd, int fd);
+                                                  ^
+ESP8266/components/esp_http_server/src/httpd_sess.c:351:51: note: Function 'httpd_sess_iterate' argument 2 names different: declaration 'fd' definition 'start_fd'.
+int httpd_sess_iterate(struct httpd_data *hd, int start_fd)
+                                                  ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:255:9: portability: %d in format string (no. 3) requires 'int' but the argument type is 'ssize_t {aka signed long}'. [invalidPrintfArgType_sint]
+    if (snprintf(ra->scratch, sizeof(ra->scratch), httpd_hdr_str,
+        ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:360:5: portability: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'ssize_t {aka signed long}'. [invalidPrintfArgType_uint]
+    snprintf(len_str, sizeof(len_str), "%x\r\n", buf_len);
+    ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:77:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:312:17: style: The scope of the variable 'httpd_chunked_hdr_str' can be reduced. [variableScope]
+    const char *httpd_chunked_hdr_str = "HTTP/1.1 %s\r\nContent-Type: %s\r\nTransfer-Encoding: chunked\r\n";
+                ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:313:17: style: The scope of the variable 'colon_separator' can be reduced. [variableScope]
+    const char *colon_separator = ": ";
+                ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:314:17: style: The scope of the variable 'cr_lf_seperator' can be reduced. [variableScope]
+    const char *cr_lf_seperator = "\r\n";
+                ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:55:29: style:inconclusive: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'. [funcArgNamesDifferent]
+int httpd_send(httpd_req_t *r, const char *buf, size_t buf_len)
+                            ^
+ESP8266/components/esp_http_server/src/esp_httpd_priv.h:456:29: note: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'.
+int httpd_send(httpd_req_t *req, const char *buf, size_t buf_len);
+                            ^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:55:29: note: Function 'httpd_send' argument 1 names different: declaration 'req' definition 'r'.
+int httpd_send(httpd_req_t *r, const char *buf, size_t buf_len)
+                            ^
+examples/Blinker_Hello/Hello_WiFi/main/blinker_example_main.c:67:0: style: The function 'app_main' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:404:0: style: The function 'blinker_air' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1029:0: style: The function 'blinker_aligenie_brightness' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1008:0: style: The function 'blinker_aligenie_color' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1022:0: style: The function 'blinker_aligenie_color_temp' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1093:0: style: The function 'blinker_aligenie_handler_register' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1064:0: style: The function 'blinker_aligenie_hswing' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1043:0: style: The function 'blinker_aligenie_humi' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1057:0: style: The function 'blinker_aligenie_level' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1015:0: style: The function 'blinker_aligenie_mode' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1050:0: style: The function 'blinker_aligenie_pm25' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1001:0: style: The function 'blinker_aligenie_power_state' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1078:0: style: The function 'blinker_aligenie_print' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1036:0: style: The function 'blinker_aligenie_temp' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1071:0: style: The function 'blinker_aligenie_vswing' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:330:0: style: The function 'blinker_builtin_switch_handler' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:337:0: style: The function 'blinker_builtin_switch_state' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:683:0: style: The function 'blinker_config_get' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:642:0: style: The function 'blinker_config_update' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1225:0: style: The function 'blinker_dueros_aqi' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1183:0: style: The function 'blinker_dueros_brightness' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1218:0: style: The function 'blinker_dueros_co2' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1152:0: style: The function 'blinker_dueros_color' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1171:0: style: The function 'blinker_dueros_color_temp' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1261:0: style: The function 'blinker_dueros_handler_register' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1197:0: style: The function 'blinker_dueros_humi' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1232:0: style: The function 'blinker_dueros_level' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1159:0: style: The function 'blinker_dueros_mode' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1211:0: style: The function 'blinker_dueros_pm10' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1204:0: style: The function 'blinker_dueros_pm25' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1145:0: style: The function 'blinker_dueros_power_state' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1246:0: style: The function 'blinker_dueros_print' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1190:0: style: The function 'blinker_dueros_temp' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1239:0: style: The function 'blinker_dueros_time' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:321:0: style: The function 'blinker_heart_beat_handler' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:600:0: style: The function 'blinker_log' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1346:0: style: The function 'blinker_miot_brightness' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1374:0: style: The function 'blinker_miot_co2' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1318:0: style: The function 'blinker_miot_color' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1339:0: style: The function 'blinker_miot_color_temp' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1417:0: style: The function 'blinker_miot_handler_register' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1388:0: style: The function 'blinker_miot_hswing' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1360:0: style: The function 'blinker_miot_humi' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1381:0: style: The function 'blinker_miot_level' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1325:0: style: The function 'blinker_miot_mode' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1332:0: style: The function 'blinker_miot_mode_state' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1367:0: style: The function 'blinker_miot_pm25' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1311:0: style: The function 'blinker_miot_power_state' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1402:0: style: The function 'blinker_miot_print' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1353:0: style: The function 'blinker_miot_temp' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1395:0: style: The function 'blinker_miot_vswing' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/mqtt/blinker_mqtt.c:270:0: style: The function 'blinker_mqtt_disconnect' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/provisioning/blinker_prov_smartconfig.c:96:0: style: The function 'blinker_prov_smartconfig_init' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:475:0: style: The function 'blinker_push' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/utils/blinker_reboot.c:138:0: style: The function 'blinker_reboot_total_count' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:434:0: style: The function 'blinker_sms' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:242:0: style: The function 'blinker_timeslot_data' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:281:0: style: The function 'blinker_timeslot_data_init' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:994:0: style: The function 'blinker_va_multi_num' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:344:0: style: The function 'blinker_weather' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:374:0: style: The function 'blinker_weather_forecast' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:516:0: style: The function 'blinker_wechat' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:557:0: style: The function 'blinker_wechat_template' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1475:0: style: The function 'blinker_widget_icon' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1531:0: style: The function 'blinker_widget_image' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1496:0: style: The function 'blinker_widget_text1' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/api/blinker_api.c:1503:0: style: The function 'blinker_widget_text_color' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/provisioning/blinker_wifi.c:60:0: style: The function 'blinker_wifi_reset' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/util/ctrl_sock.c:68:0: style: The function 'cs_recv_from_ctrl_sock' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_main.c:105:0: style: The function 'httpd_get_client_list' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_main.c:130:0: style: The function 'httpd_get_global_transport_ctx' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_main.c:125:0: style: The function 'httpd_get_global_user_ctx' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_parse.c:850:0: style: The function 'httpd_query_key_value' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:480:0: style: The function 'httpd_register_err_handler' is never used. [unusedFunction]
+
+^
+ESP32/v4.4/components/esp_http_server/src/httpd_parse.c:1139:0: style: The function 'httpd_req_get_cookie_val' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_parse.c:907:0: style: The function 'httpd_req_get_url_query_len' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_parse.c:927:0: style: The function 'httpd_req_get_url_query_str' is never used. [unusedFunction]
+
+^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:378:0: style: The function 'httpd_resp_send_404' is never used. [unusedFunction]
+
+^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:383:0: style: The function 'httpd_resp_send_408' is never used. [unusedFunction]
+
+^
+ESP8266/components/esp_http_server/src/httpd_txrx.c:388:0: style: The function 'httpd_resp_send_500' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:302:0: style: The function 'httpd_resp_send_chunk' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:170:0: style: The function 'httpd_resp_set_hdr' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:104:0: style: The function 'httpd_sess_get_ctx' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:156:0: style: The function 'httpd_sess_get_transport_ctx' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:122:0: style: The function 'httpd_sess_set_ctx' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:45:0: style: The function 'httpd_sess_set_pending_override' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:35:0: style: The function 'httpd_sess_set_recv_override' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:25:0: style: The function 'httpd_sess_set_send_override' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:166:0: style: The function 'httpd_sess_set_transport_ctx' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_sess.c:316:0: style: The function 'httpd_sess_update_lru_counter' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:623:0: style: The function 'httpd_socket_recv' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_txrx.c:611:0: style: The function 'httpd_socket_send' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_uri.c:231:0: style: The function 'httpd_unregister_uri' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/esp_http_server/src/httpd_ws.c:470:0: style: The function 'httpd_ws_get_fd_info' is never used. [unusedFunction]
+
+^
+ESP32/v4.4/components/esp_http_server/src/httpd_ws.c:545:0: style: The function 'httpd_ws_send_data' is never used. [unusedFunction]
+
+^
+ESP32/v4.4/components/esp_http_server/src/httpd_ws.c:579:0: style: The function 'httpd_ws_send_data_async' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:422:0: style: The function 'iot_button_add_custom_cb' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:272:0: style: The function 'iot_button_create' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:249:0: style: The function 'iot_button_delete' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:343:0: style: The function 'iot_button_rm_cb' is never used. [unusedFunction]
+
+^
+ESP32/v4.3/components/Blinker/src/utils/blinker_button.c:391:0: style: The function 'iot_button_set_evt_cb' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
